@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Beogradski vremeplov</title>
+    <link href="stil.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript">        
+        jQuery(document).ready(function($) {	
+            
+            $(".clickable, .otvori, .zatvori, .zavesa").click(function(event){		
+                event.preventDefault();	
+                $( '.prozor' ).toggleClass( 'otvoren' );
+                $( '.zavesa' ).toggleClass( 'ukljucena' );
+                $( '.prozor #content' ).load('opisi.html ' + $(this).attr("href"));
+            })
+
+            $('.clickable').on('mouseenter', function() {
+                $('img').addClass('blurred');
+            }).on('mouseout', function() {        
+                $('img').removeClass('blurred');
+            })
+
+        }).on('keydown', function(event) {
+        if (event.key == "Escape") {
+                $( '.prozor' ).removeClass( 'otvoren' );
+                $( '.zavesa' ).removeClass( 'ukljucena' );
+        }
+        });
+
+    
+    </script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5J8Q6PXW9"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-D5J8Q6PXW9');
+	</script>
+
+</head>
+
+<body>
+
+<a name="pocetak"></a>
+
+<div class="wrapper">
+<div class="logo" data-0="opacity:1;top:10%" data-700="opacity:0;top:5%"><img src="img/logo.png" /></div>
+
+<div class="welcome" data-500="opacity:.9;top:30%;transform:scale(1)" data-1500="opacity:0;top:5%;transform:scale(.75)"><h2>Dobrodošli u interaktivni beogradski vremeplov.</h2> <p>Dozvolite da vam ispričamo priču o nastanku i istoriji Beograda.</p> Za kretanje kroz vreme skrolujte naviše ili naniže. Za više informacija o objektima kliknite na objekat koji vas zanima.</div>
+
+<div class="oblaci1 wrapper"></div><div class="oblaci2 wrapper"></div>
+
+<div class="background"><img src="img/background.png" /></div>
+<div class="greben"><img src="img/greben.png" /></div>
+<div class="foreground"><img src="img/foreground.png" /></div>
+<div class="dunav-back"></div><div class="dunav"></div>
+
+<!-- /* =======  Kelti  ======= */ -->
+
+<section class="kelti period" data-2000="opacity: 1; pointer-events: all; transform: scale(1)" data-3500="opacity:0; pointer-events: none; transform:scale(.75)">
+    <a href="#kelti" class="logor clickable"><img src="img/kelti.png" /></a>
+</section>
+
+<!-- /* =======  Singidunum  ======= */ -->
+
+<section class="rimljani period" data-2500="opacity:0; pointer-events: none; transform:scale(.75)" data-3500="opacity: 1; pointer-events: all; transform: scale(1)" data-5000="opacity: 1; pointer-events: all; transform: scale(1)" data-7000="opacity:0; pointer-events: none; transform:scale(.75)">
+    <a href="#rimljani" class="singidunum clickable" title="Singidunum"><img src="img/rimljani/singidunum.png" /></a>
+    <a href="#terme" class="terme clickable" title="Terme na Kosančićevom Vencu"><img src="img/rimljani/terme.png" /></a>
+    <a href="#rimljani" class="kastrum clickable" title="Beogradski kastrum"><img src="img/rimljani/kastrum.png" alt="" /></a>
+    <a href="#rimljani" class="forum clickable" title="Forum Singidunuma"><img src="img/rimljani/forum.png" /></a>
+    <a href="#anfiteatar" class="anfiteatar clickable" title="Anfiteatar antičkog Singidunuma"><img src="img/rimljani/anfiteatar.png" /></a>    
+</section>
+
+
+<!-- /* =======  XV Vek  ======= */ -->
+<section class="xv period" data-6500="opacity:0; pointer-events: none; transform:scale(.75)" data-8000="opacity: 1; pointer-events: all; transform: scale(1)" data-10000="opacity: 1; pointer-events: all; transform: scale(1)" data-11500="opacity:0; pointer-events: none; transform:scale(.75)">
+
+	<!-- Gornji Grad -->
+    <a href="#zamak" class="zamak clickable" title="Despotov zamak"><img src="img/xv/zamak.png" /></a>
+    <img class="zastave samoslika" src="img/xv/zastave.gif" />
+    <img class="gornjogradski-bedem samoslika" src="img/xv/gornjogradski-bedem.png" />
+    <img class="pozadinske-kule samoslika" src="img/xv/pozadinske-kule.png" />
+    <a href="#gornji-grad" class="gornji-grad clickable" title="Gornji-grad"><img src="img/xv/gornji-grad.png" /></a>
+    <a href="#kula-kapija" class="kula-kapija-dvora clickable" title="Kula-kapija na ulazu u Despotov zamak"><img src="img/xv/kula-kapija-dvora.png" /></a>
+    <a href="#despotova-kula" class="despotova-kula clickable" title="Dizdareva Kula i Despotova Kapija"><img src="img/xv/despotova-kula.png" /></a>
+    <a href="#zindan-kapija" class="zindan-kapija clickable" title="Gornjogradski Barbakan / Zindan Kapija"><img src="img/xv/zindan-kapija.png" /></a>
+    <a href="#ruzica" class="ruzica clickable" title="Prvobitna crkva Ružica"><img src="img/xv/ruzica.png" /></a>
+    <a href="#jaksica-kula" class="jaksica-kula clickable" title="Jakšićeva kula"><img src="img/xv/jaksica-kula.png" /></a>
+    <img class="istocni-bedem samoslika" src="img/xv/istocni-bedem.png" />
+    <img class="put-za-gornji-grad samoslika" src="img/xv/put-za-gornji-grad.png" />
+    <img class="drvece-iznad-barutane samoslika" src="img/drvece1.png" />
+    
+    <img class="sava-kapija samoslika" src="img/xv/sava-kapija.png" />
+    <img class="okrugla-kula1 samoslika" src="img/xv/okrugla-kula.png" />
+    
+    <!-- Donji Grad -->
+    <a href="#mitropolija" class="mitropolija clickable" title="Mitropolitski dvor i crkva"><img src="img/xv/mitropolija.png" /></a>
+    <a href="#donjogradski-barbakan" class="donjogradski-barbakan clickable" title="Donjogradski Barbakan"><img src="img/xv/donjogradski-barbakan.gif" /></a>
+    <img class="birtija1 samoslika" src="img/xv/birtija.png" />
+    <img class="birtija2 samoslika" src="img/xv/birtija.png" />
+    <a href="#katedrala" class="katedrala clickable" title="Katolička katedrala"><img src="img/xv/katedrala.png" /></a>
+    <a href="#donji-grad" class="donji-grad clickable" title="Donji grad"><img src="img/xv/donji-grad.png" /></a>
+    <a href="#dunavsko-pristaniste" class="dunavsko-pristaniste clickable" title="Dunavsko pristanište"><img src="img/xv/dunavsko-pristaniste.png" /></a>
+    <img class="galija2 samoslika" src="img/xv/galija3.gif" />
+    <img class="okrugla-kula2 samoslika" src="img/xv/okrugla-kula.png" />
+    <img class="magacin samoslika" src="img/xv/magacin.png" />
+    <a href="#kula-nebojsa" class="kula-nebojsa clickable" title="Nebojšina kula"><img src="img/xv/nebojsina-kula.png" /></a>
+    <img class="dunavska-kula samoslika" src="img/xv/dunavska-kula.png" />
+    <img class="galija3 samoslika" src="img/xv/galija3.gif" />
+    <img class="dunavska-kula2 samoslika" src="img/xv/dunavska-kula.png" />
+    <img class="dunavski-bedem samoslika" src="img/xv/dunavski-bedem.png" />
+    <a href="#carina" class="carina clickable" title="Carina"><img src="img/xv/carina.png" /></a>
+    <a href="#dorcol" class="dorcol clickable" title="Dorćol"><img src="img/xv/dorcol.gif" /></a>
+    <a href="#cara-dusana" class="veliki-drum clickable" title="Dorćol"><img src="img/xv/veliki-drum.png" /></a>
+    <a href="#dolap" class="dolap clickable" title="Dolap"><img src="img/xv/dolap.png" /></a>
+</section>
+
+
+
+<!-- /* =======  Turski Beograd  ======= */ -->
+
+<section class="turski period" data-10000="opacity:0; pointer-events: none; transform:scale(.75)" data-11000="opacity: 1; pointer-events: all; transform: scale(1)" data-14000="opacity: 1; pointer-events: all; transform: scale(1)"  data-14500="opacity:0; pointer-events: none; transform:scale(.75)">  
+   
+    
+    <!-- Gornji Grad -->
+    <a href="#zamak" class="zamak clickable" title="Despotov zamak"><img src="img/xv/zamak.png" /></a>
+    <img class="zastave samoslika" src="img/xv/zastave.gif" />
+    <img class="gornjogradski-bedem samoslika" src="img/xv/gornjogradski-bedem.png" />
+    <img class="pozadinske-kule samoslika" src="img/xv/pozadinske-kule.png" />
+    
+    <a href="#gornji-grad" class="gornji-grad clickable" title="Gornji-grad"><img src="img/xv/gornji-grad.png" /></a>
+    <a href="#kula-kapija" class="kula-kapija-dvora clickable" title="Kula-kapija na ulazu u Despotov zamak"><img src="img/xv/kula-kapija-dvora.png" /></a>
+    <a href="#despotova-kula" class="despotova-kula clickable" title="Dizdareva Kula i Despotova Kapija"><img src="img/xv/despotova-kula.png" /></a>
+    <a href="#zindan-kapija" class="zindan-kapija clickable" title="Gornjogradski Barbakan / Zindan Kapija"><img src="img/xv/zindan-kapija.png" /></a>
+    <a href="#ruzica" class="ruzica clickable" title="Prvobitna crkva Ružica"><img src="img/turski/ruzica.png" /></a>
+    <a href="#jaksica-kula" class="jaksica-kula clickable" title="Jakšićeva kula"><img src="img/xv/jaksica-kula.png" /></a>
+    <img class="istocni-bedem samoslika" src="img/xv/istocni-bedem.png" />
+    <a href="#bezistan" class="bezistan clickable" title="Bezistan i Karavansaraj Mehmed-Paše Sokolovića"><img src="img/turski/bezistan.png" /></a>
+    
+    <img class="sava-kapija samoslika" src="img/xv/sava-kapija.png" />
+    <img class="okrugla-kula1 samoslika" src="img/xv/okrugla-kula.png" />    
+    <img class="put-za-gornji-grad samoslika" src="img/xv/put-za-gornji-grad.png" />
+    
+    <img class="drvece-pored-mitropolije samoslika" src="img/drvece1.png" />
+    <img class="drvece-iznad-barutane samoslika" src="img/drvece1.png" />
+    
+    <!-- Donji Grad -->
+    <a href="#mitropolija" class="mitropolija-turska clickable" title="Mitropolitski dvor i crkva"><img src="img/turski/mitropolija.png" /></a>
+    <a href="#donjogradski-barbakan" class="donjogradski-barbakan clickable" title="Donjogradski Barbakan"><img src="img/xv/donjogradski-barbakan.gif" /></a>
+    <img class="birtija1 samoslika" src="img/xv/birtija.png" />
+    <a href="#turski-donji-grad" class="donji1 clickable" title="Donji grad"><img src="img/turski/donji1.png" /></a>
+    <a href="#turski-donji-grad" class="donji2 clickable" title="Donji grad"><img src="img/turski/donji2.png" /></a>
+    <a href="#turski-donji-grad" class="donji3 clickable" title="Donji grad"><img src="img/turski/donji3.png" /></a>
+    <a href="#turski-donji-grad" class="donji4 clickable" title="Donji grad"><img src="img/turski/donji4.png" /></a>
+    <a href="#dunavsko-pristaniste" class="dunavsko-pristaniste clickable" title="Dunavsko pristanište"><img src="img/xv/dunavsko-pristaniste.png" /></a>
+    <img class="galija2 samoslika" src="img/xv/galija3.gif" />
+    <img class="okrugla-kula2 samoslika" src="img/xv/okrugla-kula.png" />
+    <img class="magacin samoslika" src="img/xv/magacin.png" />
+    <a href="#kula-nebojsa" class="kula-nebojsa clickable" title="Nebojšina kula"><img src="img/xv/nebojsina-kula.png" /></a>
+    <img class="dunavska-kula samoslika" src="img/xv/dunavska-kula.png" />
+    <img class="galija3 samoslika" src="img/xv/galija3.gif" />
+    <img class="dunavska-kula2 samoslika" src="img/xv/dunavska-kula.png" />
+    <img class="dunavski-bedem samoslika" src="img/xv/dunavski-bedem.png" />
+    <a href="#dorcol-turski" class="dorcol clickable" title="Dorćol"><img src="img/xv/dorcol.gif" /></a>
+    <a href="#dorcol-turski" class="dorcol2 clickable" title="Dorćol"><img src="img/turski/dorcol2.png" /></a>
+    <a href="#dorcol-turski" class="dorcol3 clickable" title="Dorćol"><img src="img/turski/dorcol3.png" /></a>
+    <a href="#dorcol-turski" class="dorcol4 clickable" title="Dorćol"><img src="img/turski/dorcol4.png" /></a>    
+    <a href="#cara-dusana" class="veliki-drum clickable" title="Dorćol"><img src="img/xv/veliki-drum.png" /></a>    
+    <a href="#carina" class="carina clickable" title="Carina"><img src="img/xv/carina.png" /></a>
+    <a href="#dolap" class="dolap clickable" title="Dolap"><img src="img/xv/dolap.png" /></a>
+</section>
+
+
+
+<!-- /* ======= Barokni Beograd   ======= */ -->
+
+<section class="barokni period" data-14500="opacity:0; pointer-events: none; transform:scale(.75)" data-15000="opacity: 1; pointer-events: all; transform: scale(1)" data-18000="opacity: 1; pointer-events: all; transform: scale(1)">
+    
+    <!-- Gornji Grad -->
+    <a href="#pasin-konak" class="pasin-konak clickable" title="Pašin konak"><img src="img/barok/pasin-konak.png" /></a>
+    <img class="kalemegdanski-bastioni samoslika" src="img/barok/kalemegdanski-bastioni.png" />
+    <img class="crvena-palata samoslika" src="img/barok/crvena-palata.png" />
+    <img class="gornjogradski-bedem-barok samoslika" src="img/barok/gornjogradski-bedem.png" />
+    <img class="zagradje samoslika" src="img/barok/zagradje.png" />
+    <img class="kuca-izmedju samoslika" src="img/barok/kuca-izmedju.png" />
+    <img class="varos-bastioni samoslika" src="img/barok/varos-bastioni.png" />
+    <a href="#sultan-mahmudova-dzamija" class="sultan-mahmudova-dzamija clickable" title="Sultan Mahmudova džamija"><img src="img/barok/sultan-mahmudova-dzamija.png" /></a>
+    <a href="#sahat-kula" class="sahat-kula clickable" title="Sahat (Sat) Kula"><img src="img/barok/sahat-kula.png" /></a>
+    <a href="#despotova-kula" class="despotova-kula clickable" title="Dizdareva Kula i Despotova Kapija"><img src="img/xv/despotova-kula.png" /></a>
+    <a href="#zindan-kapija" class="zindan-kapija clickable" title="Gornjogradski Barbakan / Zindan Kapija"><img src="img/xv/zindan-kapija.png" /></a>
+    
+    <a href="#ruzica" class="ruzica-barok clickable" title="Nova crkva Ružica"><img src="img/barok/ruzica.png" /></a>
+    <a href="#hamam" class="hamam clickable" title="Hamam"><img src="img/barok/hamam.png" /></a>
+    <img class="odron samoslika" src="img/barok/odron.png" />
+    <a href="#barutana" class="barutana clickable" title="Barutana"><img src="img/barok/barutana.png" /></a>
+    <a href="#bastion-sv-jakova" class="bastion-sv-jakova clickable" title="Bastion sv. Jakova"><img src="img/barok/bastion-sv-jakova.png" /></a>
+    <img class="srednjegradski-bedem samoslika" src="img/barok/srednjegradski-bedem.png" />
+    <img class="put-za-gornji-grad samoslika" src="img/barok/put-za-gornji-grad.png" />
+    
+    <a href="#pirincana" class="pirincana clickable" title="Prinčev Han - Pirinčana"><img src="img/barok/pirincana.png" /></a>
+    <img class="savski-bastioni samoslika" src="img/barok/savski-bastioni.png" />
+    
+    <img class="drvece-kod-sv-petke samoslika" src="img/drvece1.png" />
+    
+    <!-- Donji Grad -->
+    <a href="#donjogradski-barbakan" class="donjogradski-barbakan-barok clickable" title="Donjogradski Barbakan"><img src="img/barok/donjogradski-barbakan.png" /></a>  
+    <img class="kasarne samoslika" src="img/barok/kasarne-donji-grad.png" />
+    <a href="#kula-nebojsa" class="kula-nebojsa clickable" title="Nebojšina kula"><img src="img/xv/nebojsina-kula.png" /></a>
+    <a href="#kapija-karla-vi" class="kapija-karla-vi clickable" title="Kapija Karla VI"><img src="img/barok/kapija-karla-vi.png" /></a>
+    <a href="#topolivnica" class="topolivnica clickable" title="Topolivnica"><img src="img/barok/topolivnica.png" /></a>
+    <img class="donjogradska-dzamija samoslika" src="img/barok/donjogradska-dzamija.png" />
+    <img class="vodena-kapija-dunavska samoslika" src="img/barok/vodena-kapija-dunavska.png" />
+    <img class="vodena-kapija-savska samoslika" src="img/barok/vodena-kapija-savska.png" />
+    <img class="dunavski-bedem-barok samoslika" src="img/barok/dunavski-bedem.png" />
+    <img class="dorcol-barok samoslika"src="img/barok/gornji-dorcol.png" />
+    <a href="#cara-dusana" class="cara-dusana clickable" title="Ulica Cara Dušana"><img src="img/barok/dorcol.gif" /></a>
+    <img class="vidin-bedem-nazad samoslika" src="img/barok/vidin-bedem-nazad.png" />
+    <a href="#vidin-kapija" class="vidin-kapija clickable" title="Vidin Kapija"><img src="img/barok/vidin-kapija.png" /></a>
+    <img class="vidin-bedem-front samoslika" src="img/barok/vidin-bedem-front.png" />
+    <img class="kasarna samoslika" src="img/barok/pasin-konak.png" />
+    <img class="kod-vidin-kapije samoslika" src="img/barok/gornji-dorcol.png" />
+</section>
+
+
+
+<a data-11000="opacity:0; pointer-events: none; transform:scale(.75)" data-12000="opacity: 1; pointer-events: all; transform: scale(1)" href="#savamala" class="savamala clickable" title="Savamala"><img src="img/turski/savamala.png" /></a>
+<a data-4500="opacity:0; pointer-events: none; transform:scale(.75)" data-5500="opacity: 1; pointer-events: all; transform: scale(1)" href="#zrnov" class="zrnov clickable" title="Drevni grad Žrnov na Avali"><img src="img/xv/zrnov.png" /></a>
+
+<div class="bwood" data-3000="left:-30%" data-4500="left:140%"><a class="clickable" href="#trijera"><img src="img/rimljani/trijera.png" /></a></div>
+<div class="bwood" data-3800="left:120%" data-6000="left:-20%"><a class="clickable" href="#trijera"><img src="img/rimljani/antitrijera.png" /></a></div>
+
+<img data-2000="opacity: 1; pointer-events: all; transform: scale(1)" data-3500="opacity:0; pointer-events: none; transform:scale(.75)" class="keltski-camac samoslika" src="img/kelti/camac.gif" />
+<div class="galija" data-7100="display:none" data-7200="display:block; left:120%" data-8000="display:block; left:-20%" data-8100="display:none"><a class="clickable" href="#sajka"><img src="img/xv/galija.png" /></a></div>
+<div class="kontragalija" data-7700="display:none" data-7800="display:block; left:-25%" data-9200="display:block; left:125%" data-9300="display:none"><a class="clickable" href="#galija"><img src="img/xv/galija2.png" /></a></div>
+<div class="galija" data-8100="display:none" data-8200="display:block;left:115%" data-9500="display:block;left:-15%" data-9600="display:none"><a class="clickable" href="#sajka"><img src="img/xv/galija.png" /></a></div>
+<div class="galija" data-11900="display:none" data-12000="display:block;left:120%" data-13000="display:block;left:-20%" data-13100="display:none"><a class="clickable" href="#sajka"><img src="img/xv/galija.png" /></a></div>
+<div class="kontragalija" data-14700="display:none" data-14800="display:block;left:-25%" data-15700="display:block;left:125%" data-15800="display:none"><a class="clickable" href="#galija"><img src="img/xv/galija2.png" /></a></div>
+<div class="galija" data-16600="display:none" data-16700="display:block;left:115%" data-17500="display:block;left:-15%" data-17600="display:none"><a class="clickable" href="#sajka"><img src="img/xv/galija.png" /></a></div>
+
+
+<div class="mrak" data-5000="opacity:0" data-6000="opacity:1" data-7500="opacity:1" data-8200="opacity:0">
+<p>Od V do XV veka, Beograd je mnogo puta menjao vlasnike, bio rušen i ponovo građen. Malo je podataka iz tog vremena. Smenjuju se Ugari, Goti, Vizantija, Bugari, Mađari...</p>
+</div>
+
+
+<div class="footer">
+	<div class="footmenu"><a class="otvori" href="#reference">Reference</a> | <a class="otvori" href="#disklejmer">Disklejmer</a> | <a class="na-pocetak" href="#pocetak">Na početak <img src="img/gore.png" /></a></div>
+    
+    <h2 data-500="opacity:1" data-3500="opacity:0">Keltski Singidun<span class="anno">, IV - I vek PNE</span></h2>
+    <h2 data-3500="opacity:0" data-4000="opacity:1" data-5000="opacity:1" data-6500="opacity:0">Rimski Singidunum<span class="anno">, I vek PNE - V vek</span></h2>
+    <h2 data-6500="opacity:0" data-8000="opacity:1" data-10000="opacity:1" data-11000="opacity:0;">Beograd Despota Stefana<span class="anno">, XV vek</span></h2>
+    <h2 data-10000="opacity:0" data-11500="opacity:1" data-14000="opacity:1" data-14500="opacity:0">Turski Beograd<span class="anno">, XVI - XVIII vek</span></h2>
+    <h2 data-14500="opacity:0" data-15000="opacity:1" data-18000="opacity:1">Barokni Beograd<span class="anno">, XVIII vek</span></h2>
+</div>
+
+
+
+<div class="prozorwrap">
+	<div class="prozor">
+		<a class="zatvori"></a>
+		<div id="content"></div>
+	</div>
+</div><!-- .prozorwrap -->
+<div class="zavesa"></div>
+
+</div><!-- .bgholder -->
+</div><!-- .wrapper -->
+
+	<script type="text/javascript" src="skrollr/dist/skrollr.min.js"></script>
+
+	<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});	
+	</script>
+
+</body>
+</html>

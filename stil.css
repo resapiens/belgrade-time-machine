@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,latin-ext);
+
+*{box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box}
+html, body {margin:0}
+
+img {max-width:100%; height:auto; filter: blur(.5px); transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);} /* For a smoother image */
+
+img.blurred {
+    filter: blur(1.5px);
+}
+
+body {background:#272626; font-family: 'Roboto', sans-serif;}
+
+a, a:visited {color:#fff; text-decoration:underline}
+a:focus, a:hover {color:#ccc}
+h2, h3 {font-weight:normal; margin:0; padding:0}
+
+p,ul,li {line-height:1.5em}
+
+.wrapper {width:1280px; height:768px; position:fixed; overflow:hidden; background:#C7FFFF; margin:0 auto; z-index:1; top:50vh; left:50vw; transform: translate(-50%,-50%)}
+
+.logo {top:50px; width:100%; text-align:center; position:absolute}
+.welcome {width:40%; background:#fff; box-shadow:0 1px 10px rgba(0,0,0,.2); margin:2% 30%; padding:15px 30px; z-index:2000; position:absolute}
+
+.clickable {display:block; transition:all ease .3s; -webkit-transition:all ease .3s; -moz-transition:all ease .3s; position:relative; cursor:pointer; float: left; clear: left; }
+.clickable:hover > img {filter: blur(0)}
+
+.tooltip {position:fixed; bottom:20px; left:40px; background:#433; color:#fff; opacity:0; z-index:3001}
+.clickable:hover > .tooltip {opacity:1}
+
+.alignleft {float:left; clear:left; padding:0 1em 1em 0}
+.alignright {float:right; clear:right; padding:0 0 1em 1em}
+
+
+.bgholder {position:absolute; bottom:0; left:0; width:100%;}
+.background, .foreground {position:absolute}
+.background img, .foreground img, .greben img {max-width:100%}
+.background {z-index:-1;bottom:0;}
+.foreground {z-index:1000;bottom:200px;}
+.greben {z-index:100; position:absolute; bottom:240px;}
+.dunav-back {background:#3BABBF url(img/dunav.gif); width:100%; height:242px; z-index:100; position:absolute; bottom:0; display:block;}
+.dunav {background:#3BABBF url(img/dunav.gif); width:100%; height:187px; z-index:15000; position:absolute; bottom:0; display:block;}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes oblacno
+{
+from {left: 100%;}
+to {left:-100%}
+}
+
+/* Standard syntax */
+@keyframes oblacno
+{
+from {left:100%;}
+to {left:-100%}
+} 
+
+.oblaci1, .oblaci2 {position:absolute; background-repeat: repeat-x}
+.oblaci1 {-webkit-animation: oblacno linear 90s infinite;
+animation: oblacno linear 60s infinite;}
+.oblaci2 {-webkit-animation: oblacno 3s linear 160s infinite;
+animation: oblacno linear 100s infinite;}
+
+.oblaci1{background:url(img/oblaci1.png);background-size:100% 50%;z-index:-2}
+.oblaci2{background:url(img/oblaci2.png) center 45%;background-size:100% 50%;z-index:-3;}
+
+
+.period {position:absolute; bottom:99px; width:100%}
+.period a, .samoslika {position:absolute; }
+.period img {max-width:100%;}
+
+.kelti {z-index:98}
+.rimljani {z-index:96}
+.xv {z-index:2001}
+.turski {z-index:2002}
+.barokni {z-index:2003}
+.bwood {position:absolute; left:-210px; bottom:150px; z-index:15001}
+
+.galija {position:absolute; right:-200px; bottom:100px; z-index:15100}
+.kontragalija{position:absolute; right:-200px; bottom:115px; z-index:15100}
+
+/* Kelti */
+.logor {bottom:275px; right:480px; display:block}
+.keltski-camac {bottom:172px; left:150px; z-index:15009}
+
+/* =======  Rimljani  ======= */
+
+.terme {bottom:155px; right:5px; z-index:109}
+.singidunum {bottom:212px; z-index:108}
+.forum {bottom:310px; left:455px; z-index:111}
+.kastrum {bottom:270px; right:385px; z-index:115}
+.anfiteatar {bottom:280px; left:100px; z-index:112}
+
+
+/* =======  Despot  ======= */
+
+.zrnov {top:220px; left:344px; z-index:0; position:absolute}
+
+.pozadinske-kule {bottom:263px; right:420px; z-index:125}
+.gornji-grad {bottom:290px; left:466px; z-index:130}
+.zastave {bottom:360px; right:208px; z-index:149}
+.zamak {bottom:233px; right:186px; z-index:150}
+.kula-kapija-dvora {bottom:295px; right:475px; z-index:128}
+.gornjogradski-bedem {bottom:270px; right:400px; z-index:140}
+.despotova-kula {bottom:285px; left:390px; z-index:139}
+.zindan-kapija {bottom:273px; left:244px; z-index:138}
+.ruzica {bottom:245px; left:250px; z-index:140}
+.jaksica-kula {bottom:245px; left:180px; z-index:139}
+.istocni-bedem {bottom:200px; left:220px; z-index:145}
+.put-za-gornji-grad {bottom:150px; left:730px; z-index:145}
+
+.okrugla-kula1  {bottom:220px; left:360px; z-index:145}
+
+.mitropolija {bottom:180px; left:500px; z-index:920}
+.donjogradski-barbakan {bottom:195px; left:282px; z-index:950}
+.birtija1 {bottom:230px; left:440px; z-index:940}
+.okrugla-kula2  {bottom:128px; left:404px; z-index:1498}
+.magacin {bottom:133px; left:444px; z-index:1499}
+.transform:scale(1) {bottom:116px; right:43px; z-index:1450}
+
+.birtija2 {bottom:160px; right:270px; z-index:1000}
+.donji-grad {bottom:132px; right:180px; z-index:1003}
+.katedrala {bottom:128px; right:544px; z-index:1004}
+.dunavski-bedem {bottom:98px; right:120px; z-index:1500}
+.dunavsko-pristaniste {bottom:88px; left:280px; z-index:1498}
+.galija2 {bottom:114px; left:320px; z-index:1499}
+.kula-nebojsa {bottom:90px; left:360px; z-index:1501}
+.dunavska-kula {bottom:95px; right:80px; z-index:1501}
+.galija3 {bottom:113px; right:20px; z-index:1500}
+.dunavska-kula2 {bottom:117px; right:10px; z-index:1499}
+.carina {bottom:140px; left:210px; z-index:1090}
+.dolap {bottom:97px; left:85px; z-index:1100}
+
+.dorcol {bottom:130px; left:0; z-index:1050}
+.veliki-drum {bottom:197px; left:-20px; z-index:1049}
+
+
+/* =======  Turski Beograd  ======= */
+
+.pozadinske-kule {bottom:263px; right:420px; z-index:125}
+.turski-gornji-grad {bottom:263px; right:420px; z-index:126}
+
+.bezistan {bottom:226px; left:-10px; z-index:138}
+
+.mitropolija-turska {bottom:200px; left:610px; z-index:919}
+.drvece-pored-mitropolije{bottom:230px; left:440px; z-index:920}
+.drvece-iznad-barutane{bottom:230px; left:760px; z-index:910}
+
+.donji1 {bottom:160px; left:700px; z-index:1003}
+.donji2 {bottom:127px; left:595px; z-index:1003}
+.donji3 {bottom:126px; left:850px; z-index:1003}
+.donji4 {bottom:182px; left:450px; z-index:1003}
+
+.dorcol {bottom:130px; left:0; z-index:1050}
+.dorcol2 {bottom:130px; left:70px; z-index:1050}
+.dorcol3 {bottom:203px; left:180px; z-index:1049}
+.dorcol4 {bottom:285px; left:10px; z-index:128}
+
+.savamala {bottom:286px; right:0; z-index:138; position:absolute}
+
+
+/* =======  Barok  ======= */
+
+.zagradje {bottom:307px; left:440px; z-index:125}
+.pasin-konak {bottom:303px; left:745px; z-index:140}
+.crvena-palata {bottom:288px; left:1015px; z-index:128}
+.gornjogradski-bedem-barok {bottom:242px; left:390px; z-index:140}
+.sultan-mahmudova-dzamija {bottom:303px; left:550px; z-index:139}
+.kuca-izmedju {bottom:306px; left:606px; z-index:138}
+.sahat-kula {bottom:302px; left:640px; z-index:129}
+.kalemegdanski-bastioni {bottom:268px; left:86px; z-index:138}
+
+.pirincana {bottom:219px; left:2px; z-index:150}
+.ruzica-barok {bottom:265px; left:270px; z-index:140}
+.srednjegradski-bedem {bottom:190px; left:245px; z-index:141}
+.odron {bottom:200px; left:500px; z-index:120}
+.hamam {bottom:190px; left:600px; z-index:920}
+.donjogradski-barbakan-barok {bottom:185px; left:482px; z-index:950}
+.put-za-gornji-grad {bottom:145px; left:725px; z-index:145}
+.drvece-kod-sv-petke {bottom:230px; left:340px; z-index:140}
+
+.varos-bastioni {bottom:190px; right:40px; z-index:137}
+.savski-bastioni {bottom:117px; right:38px; z-index:1450}
+.barutana  {bottom:148px; left:887px; z-index:1451}
+
+.donjogradska-dzamija  {bottom:160px; left:690px; z-index:1488}
+.kasarne {bottom:132px; left:520px; z-index:1498}
+.kasarna {bottom:138px; left:60px; z-index:1498}
+.kod-vidin-kapije {bottom:160px; left:250px; z-index:1497}
+.katedrala {bottom:128px; right:544px; z-index:1004}
+.dunavski-bedem-barok {bottom:100px; right:50px; z-index:1500}
+.kula-nebojsa {bottom:90px; left:360px; z-index:1501}
+
+.bastion-sv-jakova {bottom:88px; right:70px; z-index:1501}
+.vodena-kapija-savska {bottom:109px; right:0; z-index:1499}
+.vodena-kapija-dunavska {bottom:95px; left:180px; z-index:1501}
+
+.vidin-bedem-nazad {bottom:192px; left:132px; z-index:1050}
+.vidin-kapija {bottom:184px; left:135px; z-index:1050}
+.vidin-bedem-front {bottom:111px; left:5px; z-index:1050}
+
+.kapija-karla-vi {bottom:105px; left:395px; z-index:1051}
+.topolivnica{bottom:134px; left:430px; z-index:1052}
+
+.dorcol-barok {bottom:247px; left:-5px; z-index:140}
+.cara-dusana {bottom:172px; left:-10px; z-index:1041}
+
+
+.mrak {
+    background:#000; color:#fff; width:1280px; height:768px; position:fixed; z-index:10000000; pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mrak p {padding:5% 25%; font-family: 'Roboto Slab', serif; font-size:21px; line-height:1.5em}
+
+
+/* =======  Interfejs  ======= */
+
+.footer {position:absolute; z-index:1000000; bottom:0; width:100%; height:64px; background:#534741; color:#fff;}
+.footmenu {position:absolute; left:20px; width:40%; top:20px}
+.footer h2 {position:absolute; right:20px; width:40%; top:20px; line-height:1em; font-size:24px; font-family: 'Roboto Slab', serif; text-align:right}
+.anno {opacity:.7; font-size:.75em}
+
+.prozor {
+    max-height: 60vh;
+    width: 60%;
+    height: auto;
+    opacity: 1;
+    position: absolute;
+    padding: 2em 3em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    opacity:0; background:#fff; color: #333; z-index:1000000; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+    transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    pointer-events: none;
+}
+
+.prozor.otvoren {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.prozor img  {
+    filter: blur(0)
+}
+
+.zatvori {position:absolute; cursor:pointer; right:-15px; top:-15px; color:#999; background:#000 url(img/x.png) no-repeat center; width:33px; height:33px; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%; display:block; z-index:1000001}
+.prozor #content { max-height:100%; padding:.5em; overflow-y:auto}
+
+.prozor a {color:#777}
+.prozor h2 {padding:0 0 .5em}
+
+.zavesa {position:fixed; z-index:100000; opacity:0; height:0; background:rgba(39, 38, 38, 0.8); ; transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1)}
+.zavesa.ukljucena {height:100%; width:100%; opacity:1}
